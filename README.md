@@ -8,5 +8,9 @@ To setup this project:
 1. Install [GO](https://golang.org/doc/install)
 2. Clone repo `git clone https://github.com/evansopilo/nproxy.git`
 
-## Running
-1. Run `main.go`.
+## Usage
+```
+// incomming request will be forwaded to "https://www.example.com" and response send back to the 
+// client.
+http.ListenAndServe(":8080", ReverseProxy("https://www.example.com"))
+```
